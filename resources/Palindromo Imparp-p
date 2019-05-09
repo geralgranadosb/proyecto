@@ -1,0 +1,29 @@
+digraph pushDownAutomaton {
+	bgcolor="blue:white"
+	node [color="red:white" gradientangle=270 shape=circle style=filled]
+	node [color="red:white" gradientangle=270 shape=doublecircle style=filled]
+	label="Automata - Palindromo Impar"
+	edge [color="black:gray" gradientangle=270 style=filled]
+	rankdir=UD size=20
+	node [shape=doublecircle]
+	p [shape=circle]
+	q [shape=circle]
+	r
+	node [shape=circle]
+	p -> p [label="b/b/bb
+a/b/ba
+b/a/ab
+a/a/aa
+b/#/#b
+a/#/#a
+" color=yellow]
+	p -> q [label="c/#/#
+c/b/b
+c/a/a
+"]
+	q -> q [label="b/b/λ
+a/a/λ
+"]
+	q -> r [label="λ/#/#
+"]
+}
